@@ -1,7 +1,15 @@
 import React from 'react';
-import { Text, View, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 
 const QuestionItem = props => {
+
+    const createButtonAlert = (msg)  =>
+    Alert.alert(
+      "Cevabiniz:",
+      msg,
+      { cancelable: false }
+    );
+
     return (
         <View style={styles.question}>
             <View style={styles.questionContainer}>
@@ -9,13 +17,13 @@ const QuestionItem = props => {
             </View>
             <View style={styles.details}>
                 <Button
-                    title={props.option1}
+                    title={props.option1} onPress={() => createButtonAlert(props.option1)} 
                 />
                 <Button
-                    title={props.option2}
+                    title={props.option2} onPress={() => createButtonAlert(props.option2)} 
                 />
                 <Button
-                    title={props.option3}
+                    title={props.option3} onPress={() => createButtonAlert(props.option3)} 
                 />
             </View>
         </View>

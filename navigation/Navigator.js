@@ -5,12 +5,14 @@ import { Platform } from 'react-native';
 import QuestionsOverviewScreen from '../screens/QuestionsOverviewScreen';
 import UserAuthScreen from '../screens/UserAuthScreen';
 import AdminScreen from '../screens/AdminScreen';
+import DemoScreen from '../screens/DemoScreen';
 
 const Navigator = createStackNavigator(
   {
     UserAuth: UserAuthScreen,
     Admin: AdminScreen,
-    QuestionsOverview: QuestionsOverviewScreen
+    QuestionsOverview: QuestionsOverviewScreen,
+    Demo:DemoScreen
     
   },
   {

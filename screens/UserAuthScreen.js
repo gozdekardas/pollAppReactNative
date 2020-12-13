@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text, TextInput ,View,Button,Alert} from 'react-native';
+import { Text, TextInput, View, Button, Alert } from 'react-native';
 
 const UserAuthScreen = props => {
   const [user, onChangeUser] = React.useState('');
@@ -8,7 +8,7 @@ const UserAuthScreen = props => {
   return (
     <View>
       <Text>Username:</Text>
-        <TextInput 
+      <TextInput
         label="Username: "
         style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
         onChangeText={text => onChangeUser(text)}
@@ -22,8 +22,8 @@ const UserAuthScreen = props => {
       />
       <Button
         title={'Giris Yap'}
-        onPress={() =>  user.toUpperCase() === 'ADMIN' && pass.toUpperCase() === 'ADMIN'? props.navigation.navigate('Admin') : props.navigation.navigate('QuestionsOverview')
-          }
+        onPress={() => user.toUpperCase() === 'ADMIN' && pass.toUpperCase() === 'ADMIN' ? props.navigation.navigate('Admin') : props.navigation.navigate('QuestionsOverview')
+        }
       />
     </View>
   );
